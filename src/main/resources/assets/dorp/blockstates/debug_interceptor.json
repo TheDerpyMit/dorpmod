@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dorp:block/interceptor"
+    },
+    "facing=south": {
+      "model": "dorp:block/interceptor",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "dorp:block/interceptor",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "dorp:block/interceptor",
+      "y": 270
+    }
+  }
+}

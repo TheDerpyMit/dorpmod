@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PKP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "K": {
+      "item": "dorp:crimson_kryanite"
+    },
+    "P": {
+      "item": "dorp:crimson_plate"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "dorp:anomalous_sledgehammer",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CDC",
+    "COC",
+    "DCD"
+  ],
+  "key": {
+    "C": {
+      "item": "createbigcannons:cast_iron_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "O": {
+      "item": "minecraft:observer"
+    }
+  },
+  "result": {
+    "id": "dorp:inventory_checker",
+    "count": 1
+  }
+}

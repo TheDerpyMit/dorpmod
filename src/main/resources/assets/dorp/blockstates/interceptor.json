@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,part=foot": { "model": "dorp:block/interceptor" },
+    "facing=east,part=foot": { "model": "dorp:block/interceptor", "y": 90 },
+    "facing=south,part=foot": { "model": "dorp:block/interceptor", "y": 180 },
+    "facing=west,part=foot": { "model": "dorp:block/interceptor", "y": 270 },
+    "facing=north,part=head": { "model": "dorp:block/empty" },
+    "facing=east,part=head": { "model": "dorp:block/empty", "y": 90 },
+    "facing=south,part=head": { "model": "dorp:block/empty", "y": 180 },
+    "facing=west,part=head": { "model": "dorp:block/empty", "y": 270 }
+  }
+}

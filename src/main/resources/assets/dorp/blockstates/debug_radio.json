@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "dorp:block/radio"
+    },
+    "facing=south": {
+      "model": "dorp:block/radio",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "dorp:block/radio",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "dorp:block/radio",
+      "y": 270
+    }
+  }
+}

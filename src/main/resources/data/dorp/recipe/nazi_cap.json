@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XDX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "dorp:banana"
+    }
+  },
+  "result": {
+    "id": "dorp:nazi_cap",
+    "count": 1
+  }
+}

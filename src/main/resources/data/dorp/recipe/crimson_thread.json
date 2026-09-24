@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "K",
+    "R",
+    "S"
+  ],
+  "key": {
+    "K": {
+      "item": "dorp:crimson_kryanite"
+    },
+    "R": {
+      "item": "dorp:iron_ring"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "id": "dorp:crimson_thread",
+    "count": 1
+  }
+}

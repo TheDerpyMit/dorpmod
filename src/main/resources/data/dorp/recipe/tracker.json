@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "item": "create:iron_sheet"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "dorp:tracker"
+  }
+}

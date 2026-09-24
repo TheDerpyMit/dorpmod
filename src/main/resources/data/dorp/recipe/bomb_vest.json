@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TDT",
+    "DCD",
+    " T "
+  ],
+  "key": {
+    "T": {
+      "item": "createbigcannons:he_shell"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:leather_chestplate"
+    }
+  },
+  "result": {
+    "id": "dorp:bomb_vest",
+    "count": 1
+  }
+}

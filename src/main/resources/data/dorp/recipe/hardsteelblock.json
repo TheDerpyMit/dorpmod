@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CSC",
+    "SDS",
+    "CSC"
+  ],
+  "key": {
+    "C": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "S": {
+      "tag": "c:storage_blocks/steel"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "id": "s_a_b:hardsteelblock",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "LTL",
+    "BBB"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "T": {
+      "item": "minecraft:lantern"
+    },
+    "B": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "id": "dorp:head_torch",
+    "count": 1
+  }
+}

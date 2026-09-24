@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "dorp:block/commonwealth_field_cap" },
+    "facing=east":  { "model": "dorp:block/commonwealth_field_cap", "y": 90 },
+    "facing=south": { "model": "dorp:block/commonwealth_field_cap", "y": 180 },
+    "facing=west":  { "model": "dorp:block/commonwealth_field_cap", "y": 270 }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TBI"
+  ],
+  "key": {
+    "T": {
+      "item": "createpropulsion:thruster"
+    },
+    "B": {
+      "item": "minecraft:iron_block"
+    },
+    "I": {
+      "item": "createbigcannons:he_shell"
+    }
+  },
+  "result": {
+    "id": "vestalihy:malytka",
+    "count": 1
+  }
+}

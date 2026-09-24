@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smithing_transform",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:false"
+    }
+  ]
+}

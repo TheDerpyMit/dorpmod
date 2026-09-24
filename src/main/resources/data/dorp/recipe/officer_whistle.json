@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " N ",
+    " B ",
+    " B "
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:nautilus_shell"
+    },
+    "B": {
+      "tag": "c:ingots/bronze"
+    }
+  },
+  "result": {
+    "id": "dorp:officer_whistle",
+    "count": 1
+  }
+}

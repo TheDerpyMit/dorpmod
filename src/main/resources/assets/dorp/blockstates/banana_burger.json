@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "dorp:block/banana_burger" },
+    "facing=east":  { "model": "dorp:block/banana_burger", "y": 90 },
+    "facing=south": { "model": "dorp:block/banana_burger", "y": 180 },
+    "facing=west":  { "model": "dorp:block/banana_burger", "y": 270 }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    "GCG",
+    " G "
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "dorp:crimson_plate"
+    }
+  },
+  "result": {
+    "id": "dorp:clock",
+    "count": 1
+  }
+}

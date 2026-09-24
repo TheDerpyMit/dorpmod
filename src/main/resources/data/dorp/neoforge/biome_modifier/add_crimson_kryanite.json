@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "dorp:crimson_kryanite_ore",
+  "step": "underground_decoration"
+}

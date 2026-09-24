@@ -1,0 +1,198 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.147'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.neoforged.net/releases/" }
+    // Create + Ponder + Flywheel (https://wiki.createmod.net/developers/depend-on-create/neoforge-1.21.1)
+    maven { url = "https://maven.createmod.net" }
+    maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
+    maven { url = "https://mvn.devos.one/snapshots" } // Registrate mirror
+    // Curios (https://www.curseforge.com/minecraft/mc-mods/curios)
+    maven { url = "https://maven.theillusivec4.top/releases/" }
+    // JEI + Ars Nouveau (https://github.com/mezz/JustEnoughItems/wiki/Getting-Started)
+    maven {
+        name = "Jareds maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+    }
+    // Sable / s_a_b (dev.ryanhcode.sable) - see https://modrinth.com/mod/sable
+    maven { url = "https://maven.ryanhcode.dev/releases" }
+    // Ritchie's Projectile Lib + Create Big Cannons dependencies
+    maven { url = "https://maven.realrobotix.me/master" }
+    // CurseForge via CurseMaven (for createbigcannons file ID, vestalihy, createpropulsion)
+    exclusiveContent {
+        forRepository {
+            maven { url = "https://cursemaven.com" }
+        }
+        filter { includeGroup "curse.maven" }
+    }
+    // Modrinth maven fallback (immersivecomputing, etc.)
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter { includeGroup "maven.modrinth" }
+    }
+    // Drop-in folder for jars that have no reliable maven (vestalihy, createpropulsion,
+    // immersivecomputing, s_a_b if maven fails). Drop the 1.21.1 NeoForge jars here and they
+    // are added to compile + runtime automatically. See README_DECOMPILE.md.
+    flatDir { dirs 'libs' }
+}
+
+base {
+    archivesName = mod_id
+}
+
+// Mojang ships Java 21 to end users in 1.21, so mods should target Java 21.
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    // ---- Resolvable via maven (satisfy mods.toml ranges) ----
+    // curios [9.0.0,)
+    implementation "top.theillusivec4.curios:curios-neoforge:${curios_version}"
+
+    // create / ponder / flywheel / registrate - NOT imported by any source file
+    // (only referenced by string lookups / JSON recipes at runtime), so they are
+    // compile-unneeded. The real mods provide them at runtime. Uncomment if a
+    // future source change imports com.simibubi / com.tterrag / net.createmod.
+    //implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    //implementation "net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}"
+    //compileOnly "dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}"
+    //runtimeOnly "dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}"
+    //implementation "com.tterrag.registrate:Registrate:${registrate_version}"
+
+    // JEI - compile against API, run with full jar
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+    // Ritchie's Projectile Lib [1.0.0,) - required by Create Big Cannons, v2.1.2 known good on 1.21.1
+    implementation("com.rbasamoyai:ritchiesprojectilelib:${rpl_version}+mc.${minecraft_version}-neoforge") { transitive = false }
+
+    // Create Big Cannons - NOT imported by any source file (string lookups only
+    // at runtime). Requires CurseMaven; commented out to keep offline builds working.
+    // If source ever imports it, re-enable or drop the jar into libs/.
+    //implementation "curse.maven:create-big-cannons-646668:${cbc_file_id}"
+
+    // LambDynLights - old coordinate is gone with the dead repo; the NeoForge-capable
+    // jar (lambdynamiclights-4.x+1.21.1) is provided via libs/ drop-in instead.
+    //implementation "dev.lambdaurora:lambdynlights:${lambdynlights_version}"
+
+    // Sable / s_a_b [1.4.3,). Official maven: maven.ryanhcode.dev. If it fails to resolve,
+    // download Sable NeoForge ${sable_version} for 1.21.1 into libs/ and comment this out.
+    implementation "dev.ryanhcode.sable:sable-neoforge-${minecraft_version}:${sable_version}"
+
+    // Ars Nouveau - only PerkAttributes in SunlightHelmetItem. Provided via libs/
+    // drop-in (full mod jar from the pack) instead of maven for reliability.
+    //compileOnly "com.hollingsworth.ars_nouveau:ars_nouveau-${minecraft_version}:${ars_nouveau_version}"
+
+    // MixinExtras - group moved com.llamalad7 -> io.github.llamalad7; 0.5.3 is the
+    // version NeoForge 21.1.234 itself uses (already in the gradle cache).
+    implementation "io.github.llamalad7:mixinextras-neoforge:0.5.3"
+
+    // ---- libs/ drop-in for the rest (no reliable maven coordinates in jar) ----
+    // vestalihy [2.5.0,), createpropulsion [1.1.0,), immersivecomputing (laptop),
+    // s_a_b companion if needed. Download the exact 1.21.1 NeoForge jars you built 1.63
+    // against and place them in libs/. They are picked up automatically:
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+// NOTE: stock MDK uses src/main/templates + generateModMetadata to expand ${} placeholders
+// in neoforge.mods.toml. This rebuild keeps the HARDCODED mods.toml recovered from the jar
+// (version 1.63), so no template expansion is needed. If you want placeholder expansion,
+// move src/main/resources/META-INF/neoforge.mods.toml to src/main/templates/META-INF/
+// and re-add the generateModMetadata block from the MDK.
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

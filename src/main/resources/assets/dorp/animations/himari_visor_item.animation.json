@@ -1,0 +1,50 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "normal": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "blink": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "sad": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "happy": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "surprised": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "huh": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "angry": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "tired": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    },
+    "confusing": {
+      "loop": true,
+      "animation_length": 4.0,
+      "bones": {}
+    }
+  }
+}

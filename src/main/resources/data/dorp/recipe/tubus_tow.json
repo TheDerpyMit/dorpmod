@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDG",
+    "TIH",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:blue_stained_glass"
+    },
+    "T": {
+      "item": "createpropulsion:thruster"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "H": {
+      "item": "createbigcannons:he_shell"
+    }
+  },
+  "result": {
+    "id": "vestalihy:tubus_tow",
+    "count": 1
+  }
+}

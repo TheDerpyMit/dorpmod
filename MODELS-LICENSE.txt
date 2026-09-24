@@ -1,0 +1,17 @@
+Dorp Mod - MODEL ASSETS LICENSE (PERMISSION REQUIRED)
+=======================================================
+Copyright (c) itsmit. All rights reserved.
+
+This is NOT covered by LICENSE.txt. The model art of this project -
+all 3D model files (.json, .obj, .geo.json, .bbmodel), animations
+(.animation.json) and textures (.png) under
+src/main/resources/assets/dorp/{models,geo,animations,textures}/ -
+may NOT be used, copied, modified, redistributed, or included (in whole
+or in part) in any project, mod, modpack, video, artwork, or other
+work WITHOUT explicit prior written permission from the author.
+
+To request permission, contact the author (itsmit) stating exactly
+what you want to use and where. Permission, if granted, is given in
+writing and may include conditions such as credit.
+
+In short: code = share with credit (see LICENSE.txt). Models = ask me first.

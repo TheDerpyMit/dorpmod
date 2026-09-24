@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C P",
+    "NNR",
+    "DDR"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:lightning_rod"
+    },
+    "P": {
+      "item": "dorp:crimson_plate"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "id": "dorp:interceptor",
+    "count": 1
+  }
+}

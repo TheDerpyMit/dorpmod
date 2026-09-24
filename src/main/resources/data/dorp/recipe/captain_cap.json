@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XDX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "minecraft:cyan_dye"
+    }
+  },
+  "result": {
+    "id": "dorp:captain_cap",
+    "count": 1
+  }
+}

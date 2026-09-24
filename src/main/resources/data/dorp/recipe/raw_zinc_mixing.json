@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_iron"
+    }
+  ],
+  "results": [
+    {
+      "id": "create:zinc_ingot",
+      "count": 2
+    }
+  ],
+  "processing_time": 100
+}

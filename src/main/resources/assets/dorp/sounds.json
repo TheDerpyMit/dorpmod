@@ -1,0 +1,227 @@
+{
+  "scare_sound": {
+    "sounds": [
+      {
+        "name": "dorp:scare_sound",
+        "stream": false
+      }
+    ]
+  },
+  "walkietalkie_on": {
+    "sounds": [
+      {
+        "name": "dorp:walkietalkie_on",
+        "stream": false
+      }
+    ]
+  },
+  "walkietalkie_off": {
+    "sounds": [
+      {
+        "name": "dorp:walkietalkie_off",
+        "stream": false
+      }
+    ]
+  },
+  "vest": {
+    "sounds": [
+      {
+        "name": "dorp:vest",
+        "stream": false
+      }
+    ]
+  },
+  "kryanitemining": {
+    "sounds": [
+      {
+        "name": "dorp:kryanitemining",
+        "stream": false
+      }
+    ]
+  },
+  "ring_screams": {
+    "sounds": [
+      {
+        "name": "dorp:ring/screamingman",
+        "stream": true
+      }
+    ]
+  },
+  "ring_distantsteps": {
+    "sounds": [
+      {
+        "name": "dorp:ring/distantsteps2",
+        "stream": true
+      }
+    ]
+  },
+  "ring_canyouhearme": {
+    "sounds": [
+      {
+        "name": "dorp:ring/canyouhearme",
+        "stream": true
+      }
+    ]
+  },
+  "ring_hesdown": {
+    "sounds": [
+      {
+        "name": "dorp:ring/hesdown",
+        "stream": true
+      }
+    ]
+  },
+  "ring_dripsong": {
+    "sounds": [
+      {
+        "name": "dorp:ring/dripsong",
+        "stream": true
+      }
+    ]
+  },
+  "ring_calmsteps": {
+    "sounds": [
+      {
+        "name": "dorp:ring/calmsteps",
+        "stream": true
+      }
+    ]
+  },
+  "ring_headsnap": {
+    "sounds": [
+      {
+        "name": "dorp:ring/headsnap",
+        "stream": false
+      }
+    ]
+  },
+  "ring_teleport": {
+    "sounds": [
+      {
+        "name": "dorp:ring/ring_teleport",
+        "stream": false
+      }
+    ]
+  },
+  "ring_goodbye": {
+    "sounds": [
+      {
+        "name": "dorp:ring/ring_goodbye",
+        "stream": true
+      }
+    ]
+  },
+  "ring_scream": {
+    "sounds": [
+      {
+        "name": "dorp:ring/ring_scream",
+        "stream": false
+      }
+    ]
+  },
+  "bonesnap": {
+    "sounds": [
+      {
+        "name": "dorp:ring/bonesnap",
+        "stream": false
+      }
+    ]
+  },
+  "timestop": {
+    "sounds": [
+      {
+        "name": "dorp:timestop",
+        "stream": false
+      }
+    ]
+  },
+  "timeresume": {
+    "sounds": [
+      {
+        "name": "dorp:timeresume",
+        "stream": false
+      }
+    ]
+  },
+  "time_tick": {
+    "sounds": [
+      {
+        "name": "dorp:time_tick",
+        "stream": false
+      }
+    ]
+  },
+  "paradixus_paradoxum": {
+    "sounds": [
+      {
+        "name": "dorp:paradixus_paradoxum",
+        "stream": true
+      }
+    ]
+  },
+  "timestop_start": {
+    "sounds": [
+      {
+        "name": "dorp:timestop_start",
+        "stream": false
+      }
+    ]
+  },
+  "timestop_stop": {
+    "sounds": [
+      {
+        "name": "dorp:timestop_stop",
+        "stream": false
+      }
+    ]
+  },
+  "flashon": {
+    "sounds": [
+      {
+        "name": "dorp:flashon",
+        "stream": false
+      }
+    ]
+  },
+  "flashoff": {
+    "sounds": [
+      {
+        "name": "dorp:flashoff",
+        "stream": false
+      }
+    ]
+  },
+  "cough": {
+    "sounds": [
+      {
+        "name": "dorp:cough",
+        "stream": false
+      }
+    ]
+  },
+  "ww1-whistle": {
+    "sounds": [
+      {
+        "name": "dorp:ww1-whistle",
+        "stream": false
+      }
+    ]
+  },
+  "sacredwar": {
+    "sounds": [
+      {
+        "name": "dorp:sacredwar",
+        "stream": true
+      }
+    ]
+  },
+  "kino": {
+    "sounds": [
+      {
+        "name": "dorp:kino",
+        "stream": true
+      }
+    ]
+  }
+}
+

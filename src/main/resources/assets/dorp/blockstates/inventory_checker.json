@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "dorp:block/inventory_checker" },
+    "facing=east":  { "model": "dorp:block/inventory_checker", "y": 90 },
+    "facing=south": { "model": "dorp:block/inventory_checker", "y": 180 },
+    "facing=west":  { "model": "dorp:block/inventory_checker", "y": 270 }
+  }
+}

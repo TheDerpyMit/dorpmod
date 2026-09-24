@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L ",
+    "IDI",
+    "RRR"
+  ],
+  "key": {
+    "L": { "item": "minecraft:lightning_rod" },
+    "I": { "item": "minecraft:iron_ingot" },
+    "D": { "item": "minecraft:diamond" },
+    "R": { "item": "minecraft:redstone" }
+  },
+  "result": { "id": "dorp:radio_block", "count": 1 }
+}

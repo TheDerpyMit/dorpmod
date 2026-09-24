@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "III"
+  ],
+  "key": {
+    "B": {
+      "item": "create:industrial_iron_block"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "id": "vestalihy:launch_malytka",
+    "count": 1
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "YZY",
+    "XYX"
+  ],
+  "key": {
+    "X": {
+      "tag": "c:ingots/steel"
+    },
+    "Y": {
+      "item": "minecraft:smooth_stone"
+    },
+    "Z": {
+      "tag": "c:storage_blocks/steel"
+    }
+  },
+  "result": {
+    "id": "s_a_b:doublesteelblock",
+    "count": 1
+  }
+}

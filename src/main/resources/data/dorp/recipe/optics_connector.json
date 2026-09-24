@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CB",
+    " C ",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "result": {
+    "id": "vestalihy:optics_connector",
+    "count": 1
+  }
+}

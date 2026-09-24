@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NCN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "C": {
+      "item": "dorp:crimson_plate"
+    }
+  },
+  "result": {
+    "id": "dorp:diego_stopwatch",
+    "count": 1
+  }
+}

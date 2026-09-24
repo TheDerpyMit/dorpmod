@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CSC",
+    "SNS",
+    "CSC"
+  ],
+  "key": {
+    "C": {
+      "tag": "c:ingots/cast_iron"
+    },
+    "S": {
+      "tag": "c:storage_blocks/steel"
+    },
+    "N": {
+      "tag": "c:storage_blocks/nethersteel"
+    }
+  },
+  "result": {
+    "id": "s_a_b:copmositearmor",
+    "count": 1
+  }
+}

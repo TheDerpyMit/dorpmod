@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XDX"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:diamond"
+    },
+    "D": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "result": {
+    "id": "dorp:reich_field_cap",
+    "count": 1
+  }
+}

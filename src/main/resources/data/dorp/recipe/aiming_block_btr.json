@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "IYI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Y": {
+      "item": "minecraft:yellow_stained_glass"
+    }
+  },
+  "result": {
+    "id": "vestalihy:aiming_block_btr",
+    "count": 1
+  }
+}

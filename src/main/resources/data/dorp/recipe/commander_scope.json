@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ISI",
+    "IBI",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "minecraft:spyglass"
+    },
+    "B": {
+      "item": "minecraft:blue_stained_glass"
+    }
+  },
+  "result": {
+    "id": "vestalihy:commander_scope",
+    "count": 1
+  }
+}
